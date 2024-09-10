@@ -58,9 +58,3 @@ class MovieSessionViewSet(viewsets.ModelViewSet):
         elif self.action == "retrieve":
             return MovieRetrieveSerializer
         return MovieSessionSerializer
-
-    def get_queryset(self):
-        queryset = self.queryset
-        if self.action in ("list", "retrieve"):
-            queryset = queryset.prefetch_related("movie", "cinema_hall")
-        return queryset
