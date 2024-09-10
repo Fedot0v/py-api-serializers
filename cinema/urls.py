@@ -20,7 +20,7 @@ router.register(
     basename="cinema-halls"
 )
 router.register(
-    "movie_session",
+    "movie_sessions",
     MovieSessionViewSet,
     basename="movie-sessions"
 )
